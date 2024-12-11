@@ -1,5 +1,6 @@
 import socket
 import sys
+from clientData import parseData
 
 # create a TCP/IP socket
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -12,7 +13,7 @@ sock.connect(server_address)
 
 try:
     # send data
-    message = 'This is the message am sending'
+    message = parseData()
     print('sending', message)
     #print >> sys.stderr, 'sending', message
     sock.sendall(message.encode())
