@@ -54,7 +54,7 @@ func main() {
 	// now to get username and logtime as a list
 	fmt.Println(strings.Join(obtainEntryCred(fileEntries[4]), ","))
 
-	f, errf := os.OpenFile("data.csv", os.O_CREATE | os.O_WRONLY, 0644)
+	f, errf := os.OpenFile("output/data.csv", os.O_CREATE | os.O_WRONLY, 0644)
 
 	if errf != nil {
 		log.Fatalf(err.Error())
