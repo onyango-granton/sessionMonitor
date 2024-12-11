@@ -34,7 +34,7 @@ func obtainEntryCred(s string) []string {
 func main() {
 	//attempt to open user.txt
 	//forward slash dir, backslach escape
-	userFile, err := os.ReadFile("userLogFile/users.txt")
+	userFile, err := os.ReadFile("dataManipulation/userLogFile/users.txt")
 
 	//check for error
 	if err != nil{
