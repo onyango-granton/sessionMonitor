@@ -21,11 +21,15 @@ try:
     # look for response
     amount_received = 0
     amount_expected = len(message)
+    # needs to be on server side
+    #file1 = open("myfile.txt", "a")
 
     while amount_received < amount_expected: #same as while true
         data = sock.recv(16)
         amount_received += len(data)
         print("received ", data)
+        # serverfile
+        #file1.write(data.decode('utf-8'))
         #print >> sys.stderr, "received ", data
     
 finally:
