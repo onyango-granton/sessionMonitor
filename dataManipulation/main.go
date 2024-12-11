@@ -57,8 +57,9 @@ func main() {
 	f, errf := os.OpenFile("output/data.csv", os.O_CREATE | os.O_WRONLY, 0644)
 
 	if errf != nil {
-		log.Fatalf(err.Error())
+		log.Fatalf(errf.Error())
 	}
+	
 	defer f.Close()
 
 	for _, ch := range fileEntries{
