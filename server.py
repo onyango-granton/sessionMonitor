@@ -48,4 +48,5 @@ while True:
     
     finally:
         # clean up the connection
+        clientFile.close()
         connection.close()
