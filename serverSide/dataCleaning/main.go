@@ -51,3 +51,13 @@ func readFromReceivedLogDir() {
 func main() {
 	readFromReceivedLogDir()
 }
+
+/*checks if directory exists if not create one*/
+func checkIfDirExist(directory string) {
+	if _, dirErr := os.Stat(directory); os.IsNotExist(dirErr){
+		cmd := exec.Command("mkdir", directory)
+		if _, cmdErr := cmd.Output(); cmdErr != nil{
+			log.Fatalf(cmdErr.Error())
+		}
+	}
+}
