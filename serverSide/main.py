@@ -30,6 +30,10 @@ while True:
     try:
         print('connection from', client_address)
 
+        #check if path exsists if not create it
+        if os.path.exists("dataCleaning/receivedLogs/") == False:
+            os.system("mkdir dataCleaning/receivedLogs/")
+
         #open receivedFile
         clientFile = open("dataCleaning/receivedLogs/"+client_address[0]+".txt", 'w')
         while True:
