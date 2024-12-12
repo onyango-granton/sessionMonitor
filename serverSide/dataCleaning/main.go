@@ -7,7 +7,7 @@ import (
 )
 
 func cleanFile(filename string) {
-	fileContent, err := os.ReadFile(filename)
+	fileContent, err := os.ReadFile("dataCleaning/receivedLogs/"+filename)
 
 	cleanedContent := cleanContents(string(fileContent))
 
@@ -35,7 +35,7 @@ func cleanContents(content string) string {
 }
 
 func readFromReceivedLogDir() {
-	dir, dirErr := os.ReadDir("receivedLogs")
+	dir, dirErr := os.ReadDir("dataCleaning/receivedLogs")
 	if dirErr != nil {
 		log.Fatalf(dirErr.Error())
 	}
