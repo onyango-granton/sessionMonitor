@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 	"os"
+	"os/exec"
 	"regexp"
 )
 
@@ -14,6 +15,8 @@ func cleanFile(filename string) {
 	if err != nil {
 		log.Fatalf(err.Error())
 	}
+
+	checkIfDirExist("serverOutput")
 
 	outputFile, outErr := os.OpenFile("serverOutput/"+filename, os.O_CREATE|os.O_WRONLY, 0644)
 	if outErr != nil {
