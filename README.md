@@ -1,4 +1,4 @@
-# Session Manager
+# Session Monitor
 
 ## Overview
 Session Manager is a system designed to manage and process user session logs efficiently. It integrates Python and Go to handle log data extraction, cleanup, and manipulation while generating meaningful outputs. The project utilizes system commands, file operations, and JSON serialization for seamless data processing.
@@ -13,14 +13,9 @@ Session Manager is a system designed to manage and process user session logs eff
 ## Project Structure
 ```
 SessionMonitor/
-|-- dataManipulation/
-|   |-- userLogFile/
-|   |   |-- users.txt
-|   |-- main.go
-|-- output/
-|   |-- data.csv
-|-- session_manager.py
-|-- README.md
+|-- clientApp/
+   |-- very many files :smirk:
+|-- serverApp/
 ```
 
 ## Prerequisites
