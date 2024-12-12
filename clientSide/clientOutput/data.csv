@@ -1,8 +1,10 @@
-gonyango,Dec,11,10:04,still,logged,in
-reboot,Wed,Dec,11,10:03,still,running
+gonyango,Dec,12,08:23,still,logged,in
+reboot,Thu,Dec,12,08:21,still,running
+gonyango,Dec,11,10:04,-,down,(06:56)
+reboot,Dec,11,10:03,-,17:00,(06:57)
 gonyango,Dec,11,09:00,-,crash,(01:02)
-reboot,Wed,Dec,11,08:58,still,running
-reboot,Tue,Dec,10,21:17,still,running
+reboot,Dec,11,08:58,-,17:00,(08:02)
+reboot,Dec,10,21:17,-,17:00,(19:43)
 gonyango,Dec,9,17:03,-,down,(01:09)
 gonyango,Dec,9,15:09,-,17:02,(01:53)
 reboot,Dec,9,15:08,-,18:13,(03:05)
