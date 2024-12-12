@@ -13,6 +13,8 @@ Session Manager is a system designed to manage and process user session logs eff
 ## Project Structure
 ```
 SessionMonitor/
+|-- applications/
+   |-- probably look here 👀
 |-- clientApp/
    |-- very many files 😏
 |-- serverApp/
