@@ -33,21 +33,23 @@ func obtainEntryCred(s string) []string {
 }
 
 func main() {
-	//attempt to open user.txt generated
-	userFile, err := os.ReadFile("dataManipulation/userLogFile/users.txt")
-
-	//check for readFile error
+	// attempt to open user.txt generated
+	userFile, err := os.ReadFile("dataCleaning/userLogFile/users.txt")
+	// check for readFile error
 	if err != nil {
 		log.Fatalf(err.Error())
 	}
 
-	//gives us lpgins as per lines of entry
+	// gives us lpgins as per lines of entry
 	fileEntries := strings.Split(string(userFile), string(rune(10)))
 
-	//creating a csv file to hold data
+	// check and create clientOutput directory incase non-exsistent
+	checkIfDirExist("clientOutput")
+
+	// creating a csv file to hold data
 	f, errf := os.OpenFile("clientOutput/data.csv", os.O_CREATE|os.O_WRONLY, 0644)
 
-	//error handling for OpenFile csv
+	// error handling for OpenFile csv
 	if errf != nil {
 		log.Fatalf(errf.Error())
 	}
@@ -55,13 +57,13 @@ func main() {
 	defer f.Close()
 
 	for _, ch := range fileEntries {
-		//writing data to a csv file
+		// writing data to a csv file
 		inputEntry := obtainEntryCred(ch)
 		if inputEntry == nil {
 			continue
 		}
 
-		//converting each entry into a comma seperated entry
+		// converting each entry into a comma seperated entry
 		_, writeErr := f.WriteString(strings.Join(inputEntry, ",") + string(rune(10)))
 
 		// error handling during csv file write
