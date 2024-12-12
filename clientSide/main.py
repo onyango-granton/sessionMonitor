@@ -6,8 +6,11 @@ from getClientData import getUnameAndLogs
 # create a TCP/IP socket
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
+# ask for server_ip input
+serverIp = input("Hello, Enter the server ip: ")
+
 #connect the socket to the port of listening server
-server_address =  ('localhost',4444)
+server_address =  (serverIp,4444)
 
 print('connecting to "%s" port "%s"' % server_address)
 sock.connect(server_address)
