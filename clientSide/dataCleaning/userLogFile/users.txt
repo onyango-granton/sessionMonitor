@@ -1,8 +1,10 @@
-gonyango tty2         tty2             Wed Dec 11 10:04   still logged in
-reboot   system boot  6.8.0-48-generic Wed Dec 11 10:03   still running
+gonyango tty2         tty2             Thu Dec 12 08:23   still logged in
+reboot   system boot  6.8.0-48-generic Thu Dec 12 08:21   still running
+gonyango tty2         tty2             Wed Dec 11 10:04 - down   (06:56)
+reboot   system boot  6.8.0-48-generic Wed Dec 11 10:03 - 17:00  (06:57)
 gonyango tty2         tty2             Wed Dec 11 09:00 - crash  (01:02)
-reboot   system boot  6.8.0-48-generic Wed Dec 11 08:58   still running
-reboot   system boot  6.8.0-48-generic Tue Dec 10 21:17   still running
+reboot   system boot  6.8.0-48-generic Wed Dec 11 08:58 - 17:00  (08:02)
+reboot   system boot  6.8.0-48-generic Tue Dec 10 21:17 - 17:00  (19:43)
 gonyango tty2         tty2             Mon Dec  9 17:03 - down   (01:09)
 gonyango tty2         tty2             Mon Dec  9 15:09 - 17:02  (01:53)
 reboot   system boot  6.8.0-48-generic Mon Dec  9 15:08 - 18:13  (03:05)
