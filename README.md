@@ -14,14 +14,16 @@ Session Manager is a system designed to manage and process user session logs eff
 ```
 SessionMonitor/
 |-- clientApp/
-   |-- very many files :smirk:
+   |-- very many files 😏
 |-- serverApp/
+   |-- very many files again 😂
 ```
 
 ## Prerequisites
 1. Python 3.x
 2. Go programming language
 3. `getmac` Python library: Install with `pip install getmac`
+4. `pyinstaller` Python library: Install with `pip install pyinstaller` ps: for developers
 
 ## Installation
 1. Clone the repository:
@@ -31,28 +33,22 @@ SessionMonitor/
    ```
 2. Ensure the required dependencies are installed.
 
-## Usage
+## Client Usage
 1. Run the main Python script to start the session management process:
    ```bash
-   python3 session_manager.py
+   cd applications
+   unzip clientApp.zip
+   cd clientApp
+   ./clientMain
    ```
-2. The script performs the following:
-   - Logs user activity into `dataManipulation/userLogFile/users.txt`.
-   - Creates an `output` directory for processed data.
-   - Executes the Go script to clean and format the data.
-   - Reads the cleaned data from `output/data.csv` and converts it into JSON.
-   - Outputs the JSON, integrating the MAC address as a unique key.
-
-## How It Works
-### Python Script (`session_manager.py`)
-- Executes the `last` command to fetch user session logs.
-- Creates directories if they do not exist.
-- Runs the Go script (`main.go`) for log cleanup.
-- Reads processed data, adds a MAC address, and outputs JSON.
-
-### Go Script (`dataManipulation/main.go`)
-- Processes raw log data from `users.txt`.
-- Cleans, formats, and outputs data to `output/data.csv`.
+## Server Usage
+1. Run the main Python script to start the session management process:
+   ```bash
+   cd applications
+   unzip serverApp.zip
+   cd serverApp
+   ./serverMain
+   ```
 
 ### Output
 The final JSON output includes:
@@ -81,4 +77,3 @@ This project is licensed under the [MIT](LICENSE) License. See the LICENSE file 
 - The `getmac` Python library for MAC address retrieval.
 - System utilities like `last` for session logging.
 - The Go programming language for efficient data manipulation.
-
