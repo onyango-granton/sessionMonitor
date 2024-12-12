@@ -38,8 +38,21 @@ while True:
             print('received %s' % data)
             # data is decoded from bytes to utf-8 string
             clientFile.write(data.decode('utf-8'))
+
+            # sending data to client
+            if data:
+                print("sending data back to client")
+                #print >> sys.stderr, "sending data back to client"
+                connection.sendall(data)
+            else:
+                print('no more data from', client_address)
+                #print >> sys.stderr, 'no more data from', client_address
+                break
     
     finally:
         # clean up the connection
         clientFile.close()
         connection.close()
+        os.system("go run dataCleaning/main.go")
+
+        
