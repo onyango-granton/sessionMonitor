@@ -57,6 +57,6 @@ while True:
         # clean up the connection
         clientFile.close()
         connection.close()
-        os.system("go run dataCleaning/main.go")
+        os.system("./dataCleaning/main")
 
         
