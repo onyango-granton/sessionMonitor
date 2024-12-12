@@ -16,7 +16,7 @@ def getUnameAndLogs():
     os.system("mkdir clientOutput")
 
     #run go cleanup sript
-    os.system("go run ./dataCleaning/main.go")
+    os.system("./dataCleaning/main")
 
 '''opens the csv file and returns its data in json format'''
 def parseData():
