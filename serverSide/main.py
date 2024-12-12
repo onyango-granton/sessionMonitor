@@ -13,7 +13,7 @@ serverIP = getServerData.getIPAddr()
 
 # for some reason serverIP for linux is 127.0.0.1
 
-server_address = ('localhost',4444)
+server_address = (getServerData.getIP(),4444)
 
 print("Starting up on %s port %s", server_address)
 sock.bind(server_address)
