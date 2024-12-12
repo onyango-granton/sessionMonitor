@@ -1,2 +1,3 @@
 #!/bin/bash
-go build dataCleaning/main.go
+cd dataCleaning
+go build main.go
