@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 	"os"
+	"os/exec"
 	"regexp"
 	"strings"
 )
@@ -17,10 +18,10 @@ func multispaceToSingleSpace(s string) string {
 func obtainEntryCred(s string) []string {
 	singleSpacedEntry := multispaceToSingleSpace(s)
 
-	//makes a list off space character
+	// makes a list off space character
 	entities := strings.Split(singleSpacedEntry, string(rune(32)))
 
-	//filters out last two entries... or invalid entries
+	// filters out last two entries... or invalid entries
 	if len(entities) < 8 {
 		return nil
 	}
@@ -69,5 +70,14 @@ func main() {
 		}
 
 	}
+}
 
+func checkIfDirExist(directoryName string) {
+	if _, err := os.Stat(directoryName); os.IsNotExist(err) {
+		cmd := exec.Command("mkdir", directoryName)
+
+		if _, cmderr := cmd.Output(); cmderr != nil{
+			log.Fatalf(cmderr.Error())
+		}
+	}
 }
