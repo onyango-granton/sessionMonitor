@@ -1,5 +1,6 @@
 import socket
 import getServerData
+import os
 
 # creating a tcp/ip socket
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -8,7 +9,12 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 serverIP = getServerData.getIPAddr()
 
 # binding the socket to the port
-server_address = (serverIP,4444)
+#server_address = (serverIP,4444)
+
+# for some reason serverIP for linux is 127.0.0.1
+
+server_address = ('localhost',4444)
+
 print("Starting up on %s port %s", server_address)
 sock.bind(server_address)
 
